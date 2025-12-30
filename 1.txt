@@ -1,0 +1,15 @@
+oops in cpp :
+we can say classes are user defined datatypes and objects are its variables. 
+
+how to runa file in terminal:
+--> this is for compilation->
+-:> g++ {filename} -o {any name that i want to give to the executable file}
+
+--> for running:
+-:> .\{executable file.exe} .\ represents the curr directory.
+
+
+object: its an instance of a class. its a real world entity.
+while class is not a real world entity.
+
+-> class doesnt have a size while object have a size as it takes memory while class is just a blueprint of how object looks.

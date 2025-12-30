@@ -1,0 +1,9 @@
+1-> they are attribute of class or class members.
+2-> only one copy of the member is created and is shared among all the object
+3-> its initialize before any object is created.
+
+useful when wee creates multiple objects and want to have a cnt of them so we can basically create a static member where all the objects will point to them and will get called everytime constructor is called.
+
+we can access static dara member when its in public as its a class member and not object.
+
+when static member is in private mode then we can access it via static function declaration.

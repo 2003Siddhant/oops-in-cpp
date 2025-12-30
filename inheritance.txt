@@ -1,0 +1,15 @@
+capability of a class to derive property and charactersiticcs ffrom another class.
+
+private data members can only be access inside the class.
+public data members can be access inside and outside the class.
+public and protected data members can be inherited by the derived class.
+
+protected cant be accessed directly by the class but can be inherited bu the derived class.
+
+if base class has private ,protected and public data members and if we want to inherit it then we can use any access modifier.
+
+if we use public then private and protected will overcome it and the data members will bw pvt and prtd only.
+
+if we use protected then private will overcome it and the data members will bw pvt and public will become prtd only.
+
+if we inherit the prvt members then we have to create a constructor in derived class to use the values.

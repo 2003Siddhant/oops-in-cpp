@@ -1,0 +1,3 @@
+wrapping of a data and information in a single unit while controlling access  to them.
+
+we make or data as private beacuase we dont want our user to give incorrect information as we cant make our age negative for ex. due to this we make our age in private.

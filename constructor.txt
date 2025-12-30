@@ -1,0 +1,50 @@
+-> its a special function that is automatically invoked at the time of object creation.
+-> name of constructor should be same as class name and no return type.
+-> used to initialize the value
+
+-> this is used to point the datatypes present inside the class 
+
+#copy constructor: copying the values of anther constructor. once created then compiler cant create anther copy constructor.
+
+constructor(constructor &c){
+    name=c.name
+    age=c.age
+}
+thus we can create a copy constructor on our own : constructor a2(a1)
+
+here we want a1 to get copy into a2 and also a1 to get into c but the problem is as we have created the custom constructor so we cant use now the default copy constructor. due to this we pass it as a reference .
+#-> usecases :
+a)  Creating a new object as a copy of an existing one
+b)  If your class manages resources (like dynamic memory, file handles, or network connections), the default copy constructor may cause shallow copies → multiple objects pointing to the same resource.
+- A custom copy constructor ensures deep copies, so each object owns its own independent resource.
+c) Copy constructors prevent bugs by ensuring safe duplication.
+
+
+#Destructor -:> its as instance member function that gets invoked automatically whenever an object is going to get destroyed.
+:-> its the last function that is going to get called when an object is going to get destroyed. 
+
+#usecases-:>
+a) - When an object goes out of scope (end of a block, function return, program termination), the destructor is called automatically.
+b) This ensures resources like memory, file handles, sockets, or locks are released without manual intervention.
+c) - If your class allocates dynamic memory (new / malloc), the destructor should delete / free it.
+d) - If an exception is thrown, destructors of all stack objects are called automatically.
+
+
+** shallow vs deep copy **
+a) shallow copy :
+- Definition: Copies only the values of data members as they are.
+- If a member is a pointer, only the pointer value (address) is copied, not the actual resource it points to.
+- Result: Two objects share the same resource → dangerous if one modifies or deletes it.
+-> when both a and b point to the same int. when destructor runs memoru is deleted twice which basically crashes.
+
+b) Deep Copy
+- Definition: Copies the actual resource instead of just the pointer.
+- Each object gets its own independent copy of the data.
+- Result: Safe duplication, no shared ownership issues.
+--> Now a and b each have their own int. Destructors delete safely, no double free.
+
+Q) Why the Destructor of Objects is executed in reverse order.
+ans => objects created are stored in stack when theyre declared.
+each
+when scope ends the stack unwinds in LIFO.
+reverse destruction means - if one object depends on another, the dependent object is destroyed before the resource it relies on
