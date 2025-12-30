@@ -13,3 +13,8 @@ if we use public then private and protected will overcome it and the data member
 if we use protected then private will overcome it and the data members will bw pvt and public will become prtd only.
 
 if we inherit the prvt members then we have to create a constructor in derived class to use the values.
+
+2)multilevel :=> there will be multiple levels.
+Person <- Employee <- Manager
+
+it will work like B inherits A. C inherits B and so on we ccan directly create object of C and have all properties of a,b,c. 
