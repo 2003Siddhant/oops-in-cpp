@@ -1,0 +1,12 @@
+it means many forms -> compile and runtime.
+
+compile : checking during compilation
+a) function overloading
+b) operator overloading -> complex c3=c1+c2 where c1 and c2 both are objects. here c1 basically calls the function and c2 is passed as an argument.
+
+within the class same type ke objects private data members ko access kr sakte hai like we have accessed real and imag which were private.
+
+Q) why we need default constructor for complex?
+- You’re creating a temporary object ans with no arguments.
+- That means the compiler looks for a constructor that takes no parameters → the default constructor.
+- Without it, the line Compx ans; would fail to compile because the only constructor you had initially was Compx(int r, int i).
