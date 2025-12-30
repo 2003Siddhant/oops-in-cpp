@@ -1,0 +1,7 @@
+a class can inherit from 2 classes which means it can have like 2 parents 
+
+class A , class b
+class C will inherit from both A and B
+
+class C:public A,public B 
+in this A constructor will get called first then B
